@@ -29,7 +29,11 @@ bun run build
 
 ## Publish
 
+Publishing happens automatically via GitHub Actions ([`.github/workflows/publish.yml`](.github/workflows/publish.yml)) whenever a `v*.*.*` tag is pushed:
+
 ```bash
-bun run build
-bun publish --access public
+bun pm version <patch|minor|major|x.y.z>  # bumps package.json and tags
+git push origin master --follow-tags
 ```
+
+The workflow requires an `NPM_TOKEN` repository secret (an npm Automation or Granular Access token with publish rights to `@vicstack`).
