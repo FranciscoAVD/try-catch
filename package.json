@@ -1,6 +1,6 @@
 {
   "name": "@vicstack/try-catch",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Accepts an async value or function and returns a tuple of the result with the possible error object.",
   "license": "MIT",
   "author": "Victoriano <fvictoriano.dev@gmail.com>",
