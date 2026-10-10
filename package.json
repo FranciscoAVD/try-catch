@@ -5,6 +5,14 @@
   "license": "MIT",
   "author": "Victoriano <fvictoriano.dev@gmail.com>",
   "keywords": ["try-catch", "error-handling", "async", "tuple", "typescript"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranciscoAVD/try-catch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FranciscoAVD/try-catch/issues"
+  },
+  "homepage": "https://github.com/FranciscoAVD/try-catch#readme",
   "type": "module",
   "sideEffects": false,
   "module": "./dist/index.js",
