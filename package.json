@@ -1,0 +1,35 @@
+{
+  "name": "@vicstack/try-catch",
+  "version": "1.0.0",
+  "description": "Accepts an async value or function and returns a tuple of the result with the possible error object.",
+  "license": "MIT",
+  "author": "Victoriano <fvictoriano.dev@gmail.com>",
+  "keywords": ["try-catch", "error-handling", "async", "tuple", "typescript"],
+  "type": "module",
+  "sideEffects": false,
+  "module": "./dist/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && bun build ./index.ts --outdir ./dist --target node --format esm",
+    "test": "bun test",
+    "prepublishOnly": "bun run test && bun run build"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
